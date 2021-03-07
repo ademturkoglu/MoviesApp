@@ -5,6 +5,14 @@ Purpose of the project
 
 :earth_africa: This is the demo app which has a list of movies and detail
 
+Display mode switch option (List/Grid View).
+Added search bar that works for fetched movies.
+Clicking on a movie will navigate to movie detail page.
+You can add the favorite list with touch the Star button on detail page.
+
+
+#### Powered Api by [The Movie Database (TMDb)](https://developers.themoviedb.org/3) :star: 
+
 ## Tech-stack :calling:
 
 
