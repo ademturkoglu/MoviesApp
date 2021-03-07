@@ -20,3 +20,5 @@ Purpose of the project
 * [MVVM](https://www.raywenderlich.com/34-design-patterns-by-tutorials-mvvm)
 
 * [Swift 5](https://github.com/apple/swift)
+
+======================
