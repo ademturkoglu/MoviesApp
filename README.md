@@ -3,7 +3,7 @@
 Purpose of the project
 ======================
 
-:earth_africa: This is the demo app which has a list of movies and detail
+:clapper: This is the demo app which has a list of movies and detail
 
 * Display mode switch option (List/Grid View).
 * Fetching movies from endpoint with pagination.
