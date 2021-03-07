@@ -185,6 +185,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqD-PK-SLm">
+                                <rect key="frame" x="330" y="44" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3iI-zb-nWq"/>
+                                    <constraint firstAttribute="width" constant="45" id="9TV-yW-L6C"/>
+                                </constraints>
+                                <state key="normal" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="favButtonTouched:" destination="h9x-As-uwt" eventType="touchUpInside" id="hTc-aL-pEM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="riD-nw-Voo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -196,6 +207,8 @@
                             <constraint firstItem="ubh-PG-wbz" firstAttribute="top" secondItem="riD-nw-Voo" secondAttribute="top" id="Ha7-nb-F7P"/>
                             <constraint firstItem="ubh-PG-wbz" firstAttribute="centerX" secondItem="LJn-KY-qpY" secondAttribute="centerX" id="NQU-oL-Bik"/>
                             <constraint firstItem="riD-nw-Voo" firstAttribute="trailing" secondItem="FtA-JX-Gzv" secondAttribute="trailing" constant="20" id="NnX-WG-CJp"/>
+                            <constraint firstItem="GqD-PK-SLm" firstAttribute="top" secondItem="riD-nw-Voo" secondAttribute="top" id="Psb-Mx-g3k"/>
+                            <constraint firstItem="riD-nw-Voo" firstAttribute="trailing" secondItem="GqD-PK-SLm" secondAttribute="trailing" id="bzm-p3-EeH"/>
                             <constraint firstItem="ncp-oP-OSq" firstAttribute="leading" secondItem="riD-nw-Voo" secondAttribute="leading" constant="20" id="gzu-yy-WAL"/>
                             <constraint firstItem="ncp-oP-OSq" firstAttribute="top" secondItem="hm3-kI-WoE" secondAttribute="bottom" constant="10" id="pPN-iZ-AOR"/>
                             <constraint firstItem="riD-nw-Voo" firstAttribute="trailing" secondItem="hm3-kI-WoE" secondAttribute="trailing" constant="20" id="qX4-Vm-sGf"/>
@@ -203,6 +216,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uha-pJ-Rfe"/>
                     <connections>
+                        <outlet property="favButton" destination="GqD-PK-SLm" id="AcU-wI-XsC"/>
                         <outlet property="imageView" destination="ubh-PG-wbz" id="hh5-W8-mEZ"/>
                         <outlet property="overviewLabel" destination="hm3-kI-WoE" id="wXS-rx-lpW"/>
                         <outlet property="titleLabel" destination="FtA-JX-Gzv" id="gc5-lq-wty"/>
@@ -215,6 +229,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

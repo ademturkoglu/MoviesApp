@@ -16,6 +16,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var voteLabel: UILabel!
+    @IBOutlet weak var favButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,25 @@ class MovieDetailViewController: UIViewController {
         overviewLabel.text = viewModel.overview()
         voteLabel.text = "Vote Average / Total Count: \(viewModel.voteAvarage()) / \(viewModel.voteCount())"
         imageView.load(url: viewModel.imageUrl())
+        let image = viewModel.isFavourite() ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+        favButton.setImage(image, for: .normal)
     }
+    
+    @IBAction func favButtonTouched(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        if viewModel.isFavourite() {
+            let favMovies = defaults.array(forKey: "movies") as? [Int]
+            let newFavMovies = favMovies?.filter{ $0 != movieID }
+            defaults.set(newFavMovies, forKey: "movies")
+            favButton.setImage(UIImage(systemName: "star"), for: .normal)
+        } else {
+            var favMovies = defaults.array(forKey: "movies") as? [Int] ?? [Int]()
+            favMovies.append(movieID)
+            defaults.set(favMovies, forKey: "movies")
+            favButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }
+    }
+    
 }
 extension MovieDetailViewController {
     private func setupViewModel() {

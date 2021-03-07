@@ -45,6 +45,10 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
                                                                  action: #selector(changeLayout))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
+    }
+    
     func configureNavigationBar() {
         navigationItem.title = "Movies"
         navigationItem.hidesSearchBarWhenScrolling = false

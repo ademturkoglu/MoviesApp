@@ -46,6 +46,10 @@ class MovieDetailViewModel {
 
     }
     
+    func isFavourite() -> Bool {
+        return state.movieDetail?.isFavorite ?? false
+    }
+    
     func fetchMovieDetails() {
         if isFetching {
             return
