@@ -22,3 +22,5 @@ Purpose of the project
 * [Swift 5](https://github.com/apple/swift)
 
 ======================
+
+![](https://github.com/ademturkoglu/MoviesApp/blob/master/CollectionExample/RocketSim%20Recording%20-%20iPhone%2012%20-%202021-03-07%2016.59.45.gif)
